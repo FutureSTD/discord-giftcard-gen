@@ -1,13 +1,3 @@
-LICNECE = """
-Copyright © 2021 Manishraj94112
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-"""
-
 import time
 import os
 
@@ -20,25 +10,24 @@ import random
 import string
 import ctypes
 
-try: # Check if the requrements have been installed
-    from discord_webhook import DiscordWebhook # Try to import discord_webhook
-except ImportError: # If it chould not be installed
+try:
+    from discord_webhook import DiscordWebhook
+except ImportError:
     input(f"Module discord_webhook not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install discord_webhook'\nPress enter to exit") # Tell the user it has not been installed and how to install it
-    exit() # Exit the program
-try: # Setup try statement to catch the error
-    import requests # Try to import requests
-except ImportError: # If it has not been installed
+    exit()
+try:
+    import requests
+except ImportError: 
     input(f"Module requests not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install requests'\nPress enter to exit")# Tell the user it has not been installed and how to install it
-    exit() # Exit the program
+    exit()
 
 
-class NitroGen: # Initialise the class
-    def __init__(self): # The initaliseaiton function
-        self.fileName = "Nitro Codes.txt" # Set the file name the codes are stored in
-
-    def main(self): # The main function contains the most important code
-        os.system('cls' if os.name == 'nt' else 'clear') # Clear the screen
-        if os.name == "nt": # If the system is windows
+class NitroGen:
+    def __init__(self):
+        self.fileName = "Nitro Codes.txt" 
+    def main(self): 
+        os.system('cls' if os.name == 'nt' else 'clear')
+        if os.name == "nt":
             print("")
             ctypes.windll.kernel32.SetConsoleTitleW("Nitro Generator and Checker - Made by Manishraj94112") # Change the
         else: # Or if it is unix
