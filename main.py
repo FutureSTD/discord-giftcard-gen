@@ -1,3 +1,6 @@
+#Update on June 8 2022 
+#Change of get working code is 1/125
+#change to new method
 import time
 import os
 
